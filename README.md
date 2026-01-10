@@ -3,7 +3,16 @@
 Visit: https://vite-react-tutorial.onrender.com/
 
 ## IMPORTANT
+
 Learning of REACT framework is still in progress, although the way i setup css and js folder works here for now. It may not be the best practice.... [TO BE UPDATED]
+
+[UPDATE] 10/01/2026
+- Best practice is 
+    * to put all the js / jsx code into `main.jsx` (provided when scaffolding)
+        - Call functions of other code (should be stored in `src`) into `main.jsx`
+    * put all css scode into `index.css`(provided when scaffolding)
+- Only `main.jsx` and `index.css` will get bundled by Vite.
+    
 
 ## For Local Development - 1 server for backend, 1 server for front end
 
