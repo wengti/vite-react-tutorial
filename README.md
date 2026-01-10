@@ -2,6 +2,9 @@
 - Deployed with Render
 Visit: https://vite-react-tutorial.onrender.com/
 
+## IMPORTANT
+Learning of REACT framework is still in progress, although the way i setup css and js folder works here for now. It may not be the best practice.... [TO BE UPDATED]
+
 ## For Local Development - 1 server for backend, 1 server for front end
 
 1. File structure
@@ -24,7 +27,7 @@ Visit: https://vite-react-tutorial.onrender.com/
 1.1 How to store images? (OR MAKE USE OF PUBLIC FOLDER)
 * When `npm run build` is executed (as discussed below), 
     - all the files or folders available in the `public` folder will be copied into `dist` folder.
-    
+
 * During local development,
     ```
     my-project/
@@ -33,8 +36,8 @@ Visit: https://vite-react-tutorial.onrender.com/
     │   ├── main.jsx
     │   └── ...
     ├── public/
-        ├── images
-            ├── react.png (where you should store your images)
+    │    ├── images
+    │        ├── react.png (where you should store your images)
     ├── index.html (stays at root!)
     ├── server.js (create this)
     ├── vite.config.js
