@@ -22,6 +22,7 @@ function returnMsg(req, res){
     }
 }
 
+// Catch the route that did not get resolved from above
 app.use((req, res) => {
     return res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })

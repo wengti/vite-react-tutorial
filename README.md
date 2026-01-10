@@ -21,6 +21,56 @@ Visit: https://vite-react-tutorial.onrender.com/
     └── package.json
     ```
 
+1.1 How to store images? (OR MAKE USE OF PUBLIC FOLDER)
+* When `npm run build` is executed (as discussed below), 
+    - all the files or folders available in the `public` folder will be copied into `dist` folder.
+    
+* During local development,
+    ```
+    my-project/
+    ├── src/
+    │   ├── App.jsx
+    │   ├── main.jsx
+    │   └── ...
+    ├── public/
+        ├── images
+            ├── react.png (where you should store your images)
+    ├── index.html (stays at root!)
+    ├── server.js (create this)
+    ├── vite.config.js
+    └── package.json
+    ```
+
+* After `npm run build` - a `dist` folder is created:
+    ```
+    my-project/
+    ├── src/
+    │   ├── App.jsx
+    │   ├── main.jsx
+    │   └── ...
+    |
+    ├──dist
+    │   ├─ index.html
+    |   └── images
+    |       └── react.png (where you should store your images)
+    | 
+    ├── public
+    |    └── images
+    |        └── react.png (where you should store your images)
+    ├── index.html (stays at root!)
+    ├── server.js (create this)
+    ├── vite.config.js
+    └── package.json
+    ```
+
+* Therefore, when trying to refer to the images, refer it using absolute path:
+    `/images/react.png`
+    - Consider that
+        * In local development, `/` refers to `public`
+        * In deployment, `/` refers to dist
+
+* Note: css and js files are not supposed to be put in the `public` folder as they need to be properly bundled by vite during `npm run build`
+
 2. In `server.js`
 
     ``` js
