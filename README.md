@@ -1,3 +1,7 @@
+# Proof of Working Concept
+- Deployed with Render
+Visit: https://vite-react-tutorial.onrender.com/
+
 ## For Local Development - 1 server for backend, 1 server for front end
 
 1. File structure
@@ -114,9 +118,9 @@
     });
 
     // Catch-all route: serve index.html for any non-API routes (for React Router)
-    app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-    });
+    app.use((req, res) => {
+    return res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+    })
 
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
@@ -127,5 +131,7 @@
 4. Finally set the build and start command as such on render
     Build command: `npm install && npm run build` // Create dist file
     Start command: `npm start` // Start the backend server
+
+
 
     

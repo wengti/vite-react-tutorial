@@ -22,9 +22,9 @@ function returnMsg(req, res){
     }
 }
 
-// app.get("*", (req,res) => {
-//     return res.sendFile(path.join(__dirname, 'dist', 'index.html'))
-// })
+app.use((req, res) => {
+    return res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+})
 
 const PORT = 8000
 app.listen(PORT, ()=> console.log(`The server is connected at ${PORT}`))
