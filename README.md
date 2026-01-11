@@ -83,6 +83,14 @@ Learning of REACT framework is still in progress, although the way i setup css a
 
 * Note: css and js files are not supposed to be put in the `public` folder as they need to be properly bundled by vite during `npm run build`
 
+
+1.2 Alternative, static asset (images) can also be served this way:
+<div align='center'>
+    <img src="./demo/alt-img.png"/>
+</div>
+    * IMPORTANT!!! Using relative path - so the bundler can convert it properly when built
+
+
 2. In `server.js`
 
     ``` js
